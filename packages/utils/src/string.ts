@@ -1,16 +1,16 @@
 // 'hello world' → 'Hello world'
-export function capitalize(str: string): string {
+export const capitalize = (str: string): string => {
 	return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 }
 
 // 'hello world' → 'Hello World'
-export function titleCase(str: string): string {
+export const titleCase = (str: string): string => {
 	return str.replace(/\w\S*/g, (word) => capitalize(word));
 }
 
 // 'Hello World!' → 'hello-world'
 //  into a URL‑friendly version:
-export function slugify(str: string): string {
+export const slugify = (str: string): string => {
 	return str
 		.toLowerCase()
 		.trim()
@@ -20,17 +20,17 @@ export function slugify(str: string): string {
 }
 
 // '<p>Hello</p>' → 'Hello'
-export function stripHtml(html: string): string {
+export const stripHtml = (html: string): string => {
 	return html.replace(/<[^>]*>/g, '');
 }
 
 // 'hello world foo' → 3
-export function countWords(str: string): number {
+export const countWords = (str: string): number => {
 	return str.trim().split(/\s+/).filter(Boolean).length;
 }
 
 // 'John Doe' → 'JD'
-export function initials(name: string, max = 2): string {
+export const initials = (name: string, max = 2): string => {
 	return name
 		.trim()
 		.split(/\s+/)
@@ -40,17 +40,22 @@ export function initials(name: string, max = 2): string {
 }
 
 // maskString('4111111111111234') → '************1234'
-export function maskString(str: string, visibleEnd = 4, mask = '*'): string {
+export const maskString = (str: string, visibleEnd = 4, mask = '*'): string => {
 	if (str.length <= visibleEnd) return str;
 	return mask.repeat(str.length - visibleEnd) + str.slice(-visibleEnd);
 }
 
 // 'firstName' → 'first_name'
-export function camelToSnake(str: string): string {
+export const camelToSnake = (str: string): string => {
 	return str.replace(/[A-Z]/g, (c) => `_${c.toLowerCase()}`);
 }
 
 // 'first_name' → 'firstName'
-export function snakeToCamel(str: string): string {
+export const snakeToCamel = (str: string): string => {
 	return str.replace(/_([a-z])/g, (_, c) => c.toUpperCase());
+}
+
+export const truncate = (str: string, maxLength: number, suffix = '...'): string => {
+	if (str.length <= maxLength) return str;
+	return str.slice(0, maxLength - suffix.length) + suffix;
 }

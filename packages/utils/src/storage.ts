@@ -1,28 +1,27 @@
-import { EStorageKey } from "$lib/types";
-import { browser } from '$app/environment';
+import { EStorageKey } from "@aryagg/types";
+
 
 // Save a value to localStorage
-export function setItem(key: EStorageKey, value: string): void {
+export const setItem = (key: EStorageKey, value: string): void => {
     localStorage.setItem(key, value);
-}
+};
 
 // Get a value from localStorage
-export function getItem(key: EStorageKey): string | null {
-    if (!browser) return '';
-    return localStorage.getItem(key);
-}
+export const getItem = (key: EStorageKey): string | null => {
+    return localStorage.getItem(key) ?? '';
+};
 
 // Remove a specific key
-export function removeItem(key: EStorageKey): void {
+export const removeItem = (key: EStorageKey): void => {
     localStorage.removeItem(key);
-}
+};
 
 // Check if a key exists
-export function hasItem(key: EStorageKey): boolean {
+export const hasItem = (key: EStorageKey): boolean => {
     return localStorage.getItem(key) !== null;
-}
+};
 
 // Clear only your app's keys (safe)
-export function clearAppStorage(): void {
+export const clearAppStorage = (): void => {
     Object.values(EStorageKey).forEach((key) => localStorage.removeItem(key));
-}
+};

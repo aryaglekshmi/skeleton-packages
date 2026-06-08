@@ -1,28 +1,29 @@
-import { EDataType, EInputType, IFormField } from "@aryagg/types";
-export function isEmail(value: string): boolean {
+import { EDataType, EInputType, IFormField, REGEX } from "@aryagg/types";
+
+export const isEmail = (value: string): boolean => {
 	return REGEX.EMAIL.test(value);
 }
 
-export function isPhone(value: string): boolean {
+export const isPhone = (value: string): boolean => {
 	return REGEX.PHONE.test(value);
 }
 
-export function isNumeric(value: string): boolean {
+export const isNumeric = (value: string): boolean => {
 	return !isNaN(Number(value)) && value.trim() !== '';
 }
-export function isInRange(value: number, min: number, max: number): boolean {
+export const isInRange = (value: number, min: number, max: number): boolean => {
 	return value >= min && value <= max;
 }
 
-export function hasMinLength(value: string, min: number): boolean {
+export const hasMinLength = (value: string, min: number): boolean => {
 	return value.trim().length >= min;
 }
 
-export function hasMaxLength(value: string, max: number): boolean {
+export const hasMaxLength = (value: string, max: number): boolean => {
 	return value.trim().length <= max;
 }
 
-export function isRequiredFilled(field: IFormField): boolean {
+export const isRequiredFilled = (field: IFormField): boolean => {
 	if (!field.required) return true;
 
 	const value = field.value;
@@ -49,8 +50,8 @@ export function isRequiredFilled(field: IFormField): boolean {
 			return (value || "").toString().trim().length > 0;
 	}
 }
-export function parseInputValue(value: unknown, type?: EDataType) {
-	if(!value || !type) return value; // handle null, undefined, empty string
+export const parseInputValue = (value: unknown, type?: EDataType) => {
+	if (!value || !type) return value; // handle null, undefined, empty string
 	switch (type) {
 		case EDataType.NUMBER:
 			return typeof value === "number" ? value : Number(value);
