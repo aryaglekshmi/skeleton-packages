@@ -1,0 +1,5 @@
+{
+  "name": "aryagg-monorepo",
+  "private": true,
+  "workspaces": ["packages/*"]
+}
