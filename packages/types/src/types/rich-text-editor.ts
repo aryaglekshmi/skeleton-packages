@@ -5,12 +5,15 @@ export interface IRichTextIcon {
     icon: string;
     command: string;
 }
+
 export interface IFormatOptions extends IRichTextIcon {
     type: 'select' | 'color';
     options?: ISelectOption[];
     id?: string;
 }
+
 export type TextFormatKeys = 'formatBlock' | 'fontSize' | 'foreColor' | 'hiliteColor';
+
 export interface ITextFormat {
     formatBlock: string;
     fontSize: string;

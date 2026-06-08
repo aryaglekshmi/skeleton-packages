@@ -6,7 +6,6 @@ export interface IToast {
     type: ESnackType;
 }
 
-
 export interface ISnackData {
     message: string;
     type: ESnackType;
@@ -25,6 +24,7 @@ export interface Tab {
     disabled?: boolean;
     icon?: any;
 }
+
 export interface TableColumn {
     key: string;
     label: string;
@@ -32,13 +32,13 @@ export interface TableColumn {
     class?: string;
     type?: EDataType;
 }
+
 export enum ESnackType {
     SUCCESS = 'success',
     DANGER = 'danger',
     WARNING = 'warning',
     INFO = 'info',
 }
-
 
 export enum ETheme {
     LIGHT = 'light',

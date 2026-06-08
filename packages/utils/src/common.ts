@@ -1,4 +1,4 @@
-
+import { EDataType, EInputType, IFormField } from "@aryagg/types";
 export function isEmail(value: string): boolean {
 	return REGEX.EMAIL.test(value);
 }
