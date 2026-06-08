@@ -4,7 +4,3 @@ export enum EStorageKey {
   TOKEN = "token",
   LANGUAGE = "language"
 }
-export enum EThemes {
-    LIGHT = "light",    
-    DARK = "dark"
-}
