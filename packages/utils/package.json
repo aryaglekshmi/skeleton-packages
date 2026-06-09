@@ -27,6 +27,6 @@
     "typescript": "^6.0.3"
   },
   "dependencies": {
-    "@aryagg/types": "^1.0.0"
+    "@aryagg/types": "^1.0.1"
   }
 }
