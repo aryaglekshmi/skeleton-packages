@@ -3,8 +3,8 @@
 
 /* Tailwind first so its @layer base (preflight) lands before our overrides */
 @import "tailwindcss";
-@config "./tailwind.config.js";
+@config "./src/tailwind.config.js";
 
 /* Custom styles — same @layer base, declared after, so they win */
-@import "./global.css";
-@import "./components.css";
+@import "./src/global.css";
+@import "./src/components.css";

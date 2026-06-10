@@ -2,8 +2,12 @@
     "name": "@aryagg/theme",
     "version": "0.0.1",
     "type": "module",
+    "types": "./index.d.ts",
     "exports": {
-        ".": "./src/index.css"
+        ".": {
+            "types": "./index.d.ts",
+            "default": "./index.css"
+        }
     },
     "dependencies": {
         "@fontsource/fira-mono": "^5.1.1"
