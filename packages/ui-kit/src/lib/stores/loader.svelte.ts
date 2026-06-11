@@ -1,4 +1,4 @@
-function createLoaderStore() {
+const createLoaderStore = () => {
 	let isVisible = $state(false);
 
 	return {

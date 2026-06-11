@@ -4,12 +4,12 @@ import { loaderStore } from '$lib/stores/loader.svelte';
 
 {#if loaderStore.isVisible}
 	<div
-		class="fixed inset-0 z-50 flex h-full w-full items-center justify-center rounded-lg bg-indigo-50/50 shadow-md"
+		class="fixed inset-0 z-50 flex h-full w-full items-center justify-center rounded-lg bg-accent/50 shadow-md"
 	>
 		<div role="status">
 			<svg
 				aria-hidden="true"
-				class="h-20 w-20 animate-spin fill-violet-800 text-gray-200"
+				class="h-20 w-20 animate-spin fill-accent text-gray-200"
 				viewBox="0 0 100 101"
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"

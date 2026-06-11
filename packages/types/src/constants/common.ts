@@ -1,4 +1,5 @@
 export const DEBOUNCE_DELAY = 300;
+export const DEFAULT_TIMEOUT = 300;
 
 export const REGEX = {
     SPACES: /\s+/,
