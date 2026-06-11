@@ -1,4 +1,4 @@
-import { ETheme } from "./types";
+import { ETheme } from "@aryagg/types";
 
 export const setTheme = (theme: ETheme, key: string): void => {
     const themeLink = document.getElementById('theme-style') as HTMLLinkElement | null;
