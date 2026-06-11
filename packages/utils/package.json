@@ -1,6 +1,6 @@
 {
   "name": "@aryagg/utils",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "Shared utility functions for aryagg packages",
   "main": "dist/index.mjs",
   "types": "dist/index.d.mts",
@@ -23,9 +23,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@aryagg/types": "^1.1.0",
     "tsup": "^8.5.1",
-    "typescript": "^6.0.3",
-    "@aryagg/types": "file:../types"
+    "typescript": "^6.0.3"
   },
   "dependencies": {
     "axios": "^1.17.0"
