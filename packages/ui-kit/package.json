@@ -1,6 +1,6 @@
 {
     "name": "@aryagg/ui-kit",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "scripts": {
         "dev": "vite dev",
         "build": "vite build && npm run prepack",
@@ -34,7 +34,7 @@
     },
     "devDependencies": {
         "@aryagg/theme": "^0.0.1",
-        "@aryagg/types": "^1.1.0",
+        "@aryagg/types": "^1.1.1",
         "@eslint/js": "^10.0.1",
         "@sveltejs/adapter-auto": "^7.0.1",
         "@sveltejs/kit": "^2.63.0",
@@ -59,7 +59,7 @@
         "svelte"
     ],
     "dependencies": {
-        "@aryagg/utils": "^1.1.0",
+        "@aryagg/utils": "^1.1.2",
         "svelte-bootstrap-icons": "^3.3.0"
     }
 }
